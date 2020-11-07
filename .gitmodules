@@ -1,0 +1,6 @@
+[submodule "API1"]
+	path = API1
+	url = https://github.com/erickroseira/API1
+[submodule "API2"]
+	path = API2
+	url = https://github.com/erickroseira/API2
