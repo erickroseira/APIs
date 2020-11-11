@@ -1,0 +1,23 @@
+version: '3.5'
+services:
+  #container API 1
+  jurosapione: 
+    image: erickroseira/juros.api.one:1.0
+    ports:
+      - '8080:80'
+    networks:
+      - jurosNet
+      
+  #container API 2
+  jurosapitwo: 
+    image: erickroseira/juros.api.two:1.0
+    ports:
+      - '8084:80'
+    networks:
+      - jurosNet
+    depends_on:
+      - jurosapione
+      
+networks:
+  jurosNet:
+    driver: bridge
